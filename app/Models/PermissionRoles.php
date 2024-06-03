@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Spatie\Permission\Models\Role as SpatieRole;
+use Spatie\Permission\Models\Permission as SpatiePermission;
 
-class Roles extends SpatieRole
+class PermissionRoles extends SpatiePermission
 {
     use HasFactory;
 
-    public function user(): BelongsTo
+     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }

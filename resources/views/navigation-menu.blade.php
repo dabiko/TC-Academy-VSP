@@ -34,6 +34,12 @@
                         {{ __('Roles') }}
                     </x-nav-link>
                 </div>&ensp;&ensp;
+
+                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('permission.index') }}"  wire:navigate :active="request()->routeIs('permission.index')">
+                        {{ __('Permissions') }}
+                    </x-nav-link>
+                </div>&ensp;&ensp;
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">

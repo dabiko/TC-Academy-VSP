@@ -29,6 +29,7 @@ return new class extends Migration
             $table->foreignId('user_id')->index();
             $table->integer('updated_by')->nullable();
             $table->string('name');       // For MySQL 8.0 use string('name', 125);
+            $table->string('group_name');
             $table->string('guard_name'); // For MySQL 8.0 use string('guard_name', 125);
             $table->timestamps();
 
