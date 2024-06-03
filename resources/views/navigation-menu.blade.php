@@ -27,7 +27,13 @@
                     <x-nav-link href="{{ route('candidate.index') }}"  wire:navigate :active="request()->routeIs('candidate.index')">
                         {{ __('Candidates') }}
                     </x-nav-link>
-                </div>
+                </div>&ensp;&ensp;
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('role.index') }}"  wire:navigate :active="request()->routeIs('role.index')">
+                        {{ __('Roles') }}
+                    </x-nav-link>
+                </div>&ensp;&ensp;
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">

@@ -2,6 +2,7 @@
 
 use App\Livewire\Candidate\CandidateIndex;
 use App\Livewire\Posts\PostIndex;
+use App\Livewire\Roles\RoleIndex;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,5 +20,7 @@ Route::middleware([
 
      Route::get('/candidates', CandidateIndex::class)->name('candidate.index');
      Route::get('/posts', PostIndex::class)->name('post.index');
+     Route::get('/roles', RoleIndex::class)->name('role.index');
+
 
 });
