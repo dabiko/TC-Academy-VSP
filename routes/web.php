@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Ballots\BallotIndex;
 use App\Livewire\Candidate\CandidateIndex;
 use App\Livewire\Permission\PermissionIndex;
 use App\Livewire\Posts\PostIndex;
@@ -23,6 +24,8 @@ Route::middleware([
      Route::get('/posts', PostIndex::class)->name('post.index');
      Route::get('/roles', RoleIndex::class)->name('role.index');
      Route::get('/permission', PermissionIndex::class)->name('permission.index');
+     Route::get('/ballot', BallotIndex::class)->name('ballot.index');
+
 
 
 });

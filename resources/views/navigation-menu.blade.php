@@ -17,15 +17,22 @@
                     </x-nav-link>
                 </div>&ensp;&ensp;
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('post.index') }}"  wire:navigate :active="request()->routeIs('post.index')">
-                        {{ __('Posts') }}
+                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('ballot.index') }}"  wire:navigate :active="request()->routeIs('ballot.index')">
+                        {{ __('Ballots') }}
                     </x-nav-link>
                 </div>&ensp;&ensp;
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('candidate.index') }}"  wire:navigate :active="request()->routeIs('candidate.index')">
                         {{ __('Candidates') }}
+                    </x-nav-link>
+                </div>&ensp;&ensp;
+
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('post.index') }}"  wire:navigate :active="request()->routeIs('post.index')">
+                        {{ __('Posts') }}
                     </x-nav-link>
                 </div>&ensp;&ensp;
 

@@ -1,11 +1,7 @@
 <div>
-    <x-button @click="$wire.set('CreateCandidateModal', true)" class="mt-5 mr-9 mb-5 hover:bg-indigo-700 bg-indigo-500 float-right">
-        <i class="fa-solid fa-circle-plus fa-xl"></i>&ensp;
-        {{ __('Candidate') }}
-    </x-button>
-    <x-dialog-modal wire:model.live="CreateCandidateModal" submit="save">
+    <x-dialog-modal wire:model.live="UpdateCandidateModal" submit="save">
         <x-slot name="title" class="text-justify">
-            ADD A NEW CANDIDATE
+            UPDATE CANDIDATE
         </x-slot>
 
         <x-slot name="content">
@@ -26,9 +22,9 @@
             <div class="mt-2 col-span-12">
                     <x-label for="form.post" value="{{ __('Campaign Post') }}" />
                     <select id="form.post" wire:model="form.post" class="mt-1 block w-full  text-black-300 focus:ring-indigo-500 rounded-md shadow-sm" autocomplete="form.post">
-                        <option selected value="">Select Campaign Post</option>
+                        <option selected value="form.post">Select Campaign Post</option>
                         @foreach($posts as $post)
-                            <option value="{{ $post->id }}">{{ $post->name }}</option>
+                            <option selected value="{{ $post->id }}"> {{ $post->name }}</option>
                         @endforeach
                     </select>
                     <x-input-error for="form.post" class="mt-2" />
@@ -53,7 +49,7 @@
         </x-slot>
 
         <x-slot name="footer">
-            <x-secondary-button @click="$wire.set('CreateCandidateModal', false)" wire:loading.attr="disabled">
+            <x-secondary-button @click="$wire.set('UpdateCandidateModal', false)" wire:loading.attr="disabled">
                 <i class="fa-solid fa-circle-xmark fa-xl"></i> &ensp;
                 {{ __('Cancel') }}
             </x-secondary-button>

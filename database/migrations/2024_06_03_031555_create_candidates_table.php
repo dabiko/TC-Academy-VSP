@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('candidates', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->foreignId('post_id')->index();
+            $table->string('profession');
+            $table->text('quotation');
             $table->timestamps();
         });
     }
