@@ -21,7 +21,7 @@ class PostForm extends Form
 
     public function setPost(Post $post): void
     {
-        $this->$post = $post;
+        $this->post = $post;
 
         $this->name = $post->name;
 

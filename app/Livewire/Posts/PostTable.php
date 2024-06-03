@@ -44,6 +44,9 @@ class PostTable extends Component
     }
 
     #[On('dispatch-post-created')]
+    #[On('dispatch-post-updated')]
+    #[On('dispatch-post-deleted')]
+    #[On('dispatch-post-status-updated')]
     public function render(): View
     {
         $posts = Post::search($this->search)
