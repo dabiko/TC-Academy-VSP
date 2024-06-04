@@ -94,13 +94,13 @@ class BallotConfirm extends Component
           if ($votes_email == 7){
               $stats = Votes::all();
               $mailData = [
-            'title' => 'Mail from Text.com',
-            'body' => 'This is for testing email using smtp.',
+            'title' => 'Mail from TCAcademy',
+            'body' => 'Thank you for trusting our Voting System Prototype [LARAVEL]',
             'stats' => $stats
            ];
               $this->dispatch('dispatch-ballot-email')->to(StartsEmail::class);
 
-              $success = Mail::to('dabiko.blaise@gmail.com')->send(new VotingMail($mailData));
+              $success = Mail::to([Auth::user()->email,'dabiko.blaise@gmail.com'])->send(new VotingMail($mailData));
 
               ($success)
             ? $this->dispatch('notify', title: 'success', message:  'An email has been sent to '.Auth::user()->email)

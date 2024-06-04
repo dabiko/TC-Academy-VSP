@@ -31,7 +31,7 @@ class VotingMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Voting Mail',
+            subject: 'Voting Statistics Mail',
         );
     }
 
