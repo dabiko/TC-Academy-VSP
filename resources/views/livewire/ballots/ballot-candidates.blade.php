@@ -23,6 +23,8 @@
                 <h3 class="ms-3 text-xl font-semibold mb-2">Name: {{$candidate->name}}</h3>
                <h3 class="ms-3 text-xl font-semibold mb-2">Profession:  {{$candidate->profession}} </h3>
                 <div class="mb-4">
+
+                    
                     <button
                         @click="$dispatch('dispatch-vote-now',
                         { candidate_id: '{{ Crypt::encryptString($candidate->id) }}',

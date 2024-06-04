@@ -17,6 +17,9 @@ voting is completed.
 5. A user can't vote more than one candidate running for a particular post
 6. For now, access to the registration route is still open for testing. Normally, accounts
 should be created by System Admins.
+7. Admins have access to menus like post, candidates, role and permissions for CRUD
+on the platform
+8. A toast notification is sent to the user after every successful vote.
 
 ## Tech Stack Summary
 1. Since laravel is a popular PHP framework and the task required its usage, I decided to explore
