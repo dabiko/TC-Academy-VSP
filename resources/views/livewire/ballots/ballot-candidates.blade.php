@@ -1,9 +1,16 @@
+@php
+    use App\Models\Candidate;
+@endphp
 <div>
    @if(count($posts) > 0 && count($candidates) > 0)
+
        @foreach($posts as $post)
            <div class="p-6 lg:p-8 bg-white border-b border-gray-200">
                 <h1 class="mt-8 font-semibold text-2xl text-center text-gray-900">
-                    Candidates: {{$post->name}} (4)
+                    @php
+                         $count_candidates = Candidate::where('post_id', $post->id)->count();
+                    @endphp
+                    Candidates: {{$post->name}} ({{$count_candidates}})
                 </h1>
            </div>
 
@@ -24,7 +31,7 @@
                <h3 class="ms-3 text-xl font-semibold mb-2">Profession:  {{$candidate->profession}} </h3>
                 <div class="mb-4">
 
-                    
+
                     <button
                         @click="$dispatch('dispatch-vote-now',
                         { candidate_id: '{{ Crypt::encryptString($candidate->id) }}',

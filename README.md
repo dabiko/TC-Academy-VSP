@@ -20,6 +20,10 @@ should be created by System Admins.
 7. Admins have access to menus like post, candidates, role and permissions for CRUD
 on the platform
 8. A toast notification is sent to the user after every successful vote.
+9. For any given Post, you can't create/ad more than 4 candidates as AC Academy requested 4
+candidates selected for each post.
+10. A post of candidate can't be deleted if they are already running for a campaign
+(If they exist in the vote table).
 
 ## Tech Stack Summary
 1. Since laravel is a popular PHP framework and the task required its usage, I decided to explore
