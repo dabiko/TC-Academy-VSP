@@ -12,7 +12,7 @@ class Votes extends Model
 
     public function candidate(): BelongsTo
     {
-        return $this->belongsTo(Votes::class);
+        return $this->belongsTo(Candidate::class);
     }
 
      public function post(): BelongsTo
