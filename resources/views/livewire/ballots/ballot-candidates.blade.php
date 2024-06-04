@@ -1,4 +1,19 @@
 <div>
+   @if(count($posts) > 0 && count($candidates) > 0)
+       @foreach($posts as $post)
+           @foreach($candidates as $candidate)
+               @if($post->id == $candidate->post_id && $post->name == "President")
+                   <p>Yes Yes !!</p>
+               @endif
+           @endforeach
+       @endforeach
+   @else
+       <div class="p-6 lg:p-8 bg-white border-b border-gray-200">
+    <h1 class="mt-8 font-semibold text-2xl text-center text-gray-900">
+        No Campaign is currently running
+    </h1>
+</div>
+   @endif
 <div class="p-6 lg:p-8 bg-white border-b border-gray-200">
     <h1 class="mt-8 font-semibold text-2xl text-center text-gray-900">
         Candidates: President

@@ -44,12 +44,6 @@
                         ])
 
                         @include('livewire.partials.sortable-th', [
-                          'columnName' => 'created_at',
-                          'displayName' => 'Create Date'
-
-                        ])
-
-                        @include('livewire.partials.sortable-th', [
                           'columnName' => 'updated_at',
                           'displayName' => 'Last Update'
 
@@ -78,10 +72,6 @@
 
                        <td class="whitespace-nowrap px-6 py-4">
                            {{ $candidate->profession }}
-                       </td>
-
-                       <td class="whitespace-nowrap px-6 py-4">
-                           {{ $candidate->created_at }}
                        </td>
 
                        <td class="whitespace-nowrap px-6 py-4">

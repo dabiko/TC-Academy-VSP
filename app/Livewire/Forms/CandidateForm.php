@@ -42,7 +42,7 @@ class CandidateForm extends Form
     #[Rule('required', message: ' Quotation is required')]
     #[Rule('string', message: 'Invalid Quotation')]
     #[Rule('min:20', message: 'Quotation  can not be less than 4 characters')]
-    #[Rule('max:200', message: 'Quotation can not be more than 30 characters')]
+    #[Rule('max:200', message: 'Quotation can not be more than 200 characters')]
     public string $quotation;
 
 
