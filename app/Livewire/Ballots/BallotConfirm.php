@@ -92,9 +92,11 @@ class BallotConfirm extends Component
           $votes_email = Votes::where('user_id', Auth::id())
                  ->count();
           if ($votes_email == 7){
+              $stats = Votes::all();
               $mailData = [
             'title' => 'Mail from Text.com',
-            'body' => 'This is for testing email using smtp.'
+            'body' => 'This is for testing email using smtp.',
+            'stats' => $stats
            ];
               $this->dispatch('dispatch-ballot-email')->to(StartsEmail::class);
 
