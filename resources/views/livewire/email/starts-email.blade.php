@@ -2,7 +2,6 @@
     use App\Models\Candidate;
     use App\Models\Post;
     use App\Models\Votes;
-    use Illuminate\Support\Facades\DB;
 
 
 	$posts = Post::all();
