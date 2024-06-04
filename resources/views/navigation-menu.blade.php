@@ -180,6 +180,44 @@
             </x-responsive-nav-link>
         </div>
 
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('ballot.index') }}" wire:navigate :active="request()->routeIs('ballot.index')">
+                {{ __('Ballots') }}
+            </x-responsive-nav-link>
+        </div>
+
+         <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('vote.index') }}" wire:navigate :active="request()->routeIs('vote.index')">
+                {{ __('Votes') }}
+            </x-responsive-nav-link>
+        </div>
+
+         <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('candidate.index') }}" wire:navigate :active="request()->routeIs('candidate.index')">
+                {{ __('Candidates') }}
+            </x-responsive-nav-link>
+        </div>
+
+         <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('post.index') }}" wire:navigate :active="request()->routeIs('post.index')">
+                {{ __('Posts') }}
+            </x-responsive-nav-link>
+        </div>
+
+         <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('role.index') }}" wire:navigate :active="request()->routeIs('role.index')">
+                {{ __('Roles') }}
+            </x-responsive-nav-link>
+        </div>
+
+         <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link href="{{ route('permission.index') }}" wire:navigate :active="request()->routeIs('permission.index')">
+                {{ __('Permissions') }}
+            </x-responsive-nav-link>
+        </div>
+
+
+
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="flex items-center px-4">
