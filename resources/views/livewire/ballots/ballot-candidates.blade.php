@@ -13,7 +13,7 @@
                      <div>
                 <div class=" flex items-center">
             <div class="bg-white rounded-sm shadow-md p-6 my-6 text-center">
-                <img  class="w-auto rounded-full mb-4"
+                <img  class="w-20 rounded-full mb-4"
                       src="https://spacema-dev.com/elevate/assets/images/team/1.jpg"
                       alt="Number one"
                 >
@@ -42,7 +42,7 @@
                       <div>
                 <div class=" flex items-center">
             <div class="bg-white rounded-sm shadow-md p-6 my-6 text-center">
-                <img  class="w-auto rounded-full mb-4"
+                <img  class="w-20 rounded-full mb-4"
                       src="https://spacema-dev.com/elevate/assets/images/team/1.jpg"
                       alt="Number one"
                 >
@@ -68,10 +68,10 @@
         </div>
            </div>
                    @elseif($post->id == $candidate->post_id && $post->name == "Secretary")
-                       <div>
+                        <div>
                 <div class=" flex items-center">
             <div class="bg-white rounded-sm shadow-md p-6 my-6 text-center">
-                <img  class="w-auto rounded-full mb-4"
+                <img  class="w-20 rounded-full mb-4"
                       src="https://spacema-dev.com/elevate/assets/images/team/1.jpg"
                       alt="Number one"
                 >
@@ -100,7 +100,7 @@
                         <div>
                 <div class=" flex items-center">
             <div class="bg-white rounded-sm shadow-md p-6 my-6 text-center">
-                <img  class="w-auto rounded-full mb-4"
+                <img  class="w-20 rounded-full mb-4"
                       src="https://spacema-dev.com/elevate/assets/images/team/1.jpg"
                       alt="Number one"
                 >
@@ -126,10 +126,10 @@
         </div>
            </div>
                    @elseif($post->id == $candidate->post_id && $post->name == "Treasurer")
-                        <div>
+                         <div>
                 <div class=" flex items-center">
             <div class="bg-white rounded-sm shadow-md p-6 my-6 text-center">
-                <img  class="w-auto rounded-full mb-4"
+                <img  class="w-20 rounded-full mb-4"
                       src="https://spacema-dev.com/elevate/assets/images/team/1.jpg"
                       alt="Number one"
                 >
@@ -158,7 +158,7 @@
                         <div>
                 <div class=" flex items-center">
             <div class="bg-white rounded-sm shadow-md p-6 my-6 text-center">
-                <img  class="w-auto rounded-full mb-4"
+                <img  class="w-20 rounded-full mb-4"
                       src="https://spacema-dev.com/elevate/assets/images/team/1.jpg"
                       alt="Number one"
                 >
@@ -184,10 +184,10 @@
         </div>
            </div>
                    @elseif($post->id == $candidate->post_id && $post->name == "Discipline")
-                        <div>
+                       <div>
                 <div class=" flex items-center">
             <div class="bg-white rounded-sm shadow-md p-6 my-6 text-center">
-                <img  class="w-auto rounded-full mb-4"
+                <img  class="w-20 rounded-full mb-4"
                       src="https://spacema-dev.com/elevate/assets/images/team/1.jpg"
                       alt="Number one"
                 >
@@ -215,7 +215,6 @@
                    @endif
                @endforeach
            </div>
-
        @endforeach
    @else
        <div class="p-6 lg:p-8 bg-white border-b border-gray-200">

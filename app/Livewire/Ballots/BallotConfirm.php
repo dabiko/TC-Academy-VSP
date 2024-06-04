@@ -2,11 +2,14 @@
 
 namespace App\Livewire\Ballots;
 
+use App\Livewire\Email\StartsEmail;
+use App\Mail\VotingMail;
 use App\Models\Candidate;
 use App\Models\Post;
 use App\Models\Votes;
 use App\Traits\EncryptDecrypt;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 use Livewire\Attributes\Locked;
 use Livewire\Attributes\On;
@@ -54,9 +57,9 @@ class BallotConfirm extends Component
                  ->first();
 
         $post_check = Post::findOrFail($decrypted_post_id);
-        $candi_check = Candidate::findOrFail($decrypted_candidate_id);
 
-        //dd($user_vote);
+
+        //dd($votes_email);
 
         if ($user_vote){
           $this->dispatch(
@@ -70,6 +73,7 @@ class BallotConfirm extends Component
           $this->ConfirmBallotModal  = false;
 
         }else{
+
             $voted = Votes::updateOrCreate(
                     [
                         'candidate_id' => $decrypted_candidate_id,
@@ -84,6 +88,32 @@ class BallotConfirm extends Component
             : $this->dispatch('notify', title: 'fail', message: 'Ops!! Something went wrong');
 
           $this->ConfirmBallotModal  = false;
+
+          $votes_email = Votes::where('user_id', Auth::id())
+                 ->count();
+          if ($votes_email == 7){
+              $mailData = [
+            'title' => 'Mail from Text.com',
+            'body' => 'This is for testing email using smtp.'
+           ];
+              $this->dispatch('dispatch-ballot-email')->to(StartsEmail::class);
+
+              $success = Mail::to('dabiko.blaise@gmail.com')->send(new VotingMail($mailData));
+
+              ($success)
+            ? $this->dispatch('notify', title: 'success', message:  'An email has been sent to '.Auth::user()->email)
+            : $this->dispatch('notify', title: 'fail', message: 'Ops!! Something went wrong');
+
+          }else{
+              $this->dispatch(
+              'notify',
+              title: 'info',
+              timer: 9000,
+              message:  'Dear '.Auth::user()->name.
+              ' In order to get a full starts of your votes and
+                other candidates, make sure you to cast a vote for each candidate'
+          );
+          }
 
        $this->dispatch('dispatch-ballot-casted')->to(BallotCandidates::class);
         }
