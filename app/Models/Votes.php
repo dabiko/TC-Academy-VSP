@@ -24,5 +24,14 @@ class Votes extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function scopeSearch($query, $value): void
+    {
+        $query->where('candidate_id', 'like', "%{$value}%")
+            ->orWhere('post_id', 'like', "%{$value}%")
+            ->orWhere('created_at', 'like', "%{$value}%")
+            ->orWhere('updated_at', 'like', "%{$value}%");
+    }
+
    protected $guarded = [];
 }

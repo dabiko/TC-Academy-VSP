@@ -5,6 +5,7 @@ use App\Livewire\Candidate\CandidateIndex;
 use App\Livewire\Permission\PermissionIndex;
 use App\Livewire\Posts\PostIndex;
 use App\Livewire\Roles\RoleIndex;
+use App\Livewire\Votes\VoteIndex;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,6 +26,8 @@ Route::middleware([
      Route::get('/roles', RoleIndex::class)->name('role.index');
      Route::get('/permission', PermissionIndex::class)->name('permission.index');
      Route::get('/ballot', BallotIndex::class)->name('ballot.index');
+     Route::get('/votes', VoteIndex::class)->name('vote.index');
+
 
 
 

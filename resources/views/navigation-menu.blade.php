@@ -22,6 +22,11 @@
                         {{ __('Ballots') }}
                     </x-nav-link>
                 </div>&ensp;&ensp;
+                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link href="{{ route('vote.index') }}"  wire:navigate :active="request()->routeIs('vote.index')">
+                        {{ __('Votes') }}
+                    </x-nav-link>
+                </div>&ensp;&ensp;
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link href="{{ route('candidate.index') }}"  wire:navigate :active="request()->routeIs('candidate.index')">
