@@ -7,11 +7,11 @@
     <body>
         <h1>>{{ $mailData['title'] }}</h1>
          <p>{{ $mailData['body'] }}</p>
-         <p>{{ $mailData['stats'] }}</p>
+{{--         <p>{{ $mailData['stats'] }}</p>--}}
             @foreach($mailData['stats']  as $key => $stat)
                 <div>
-                    <p>{{$stat}}</p>
-                    <p>{{$key}}</p>
+                    <p>{{$stat['id']}}</p>
+{{--                    <p>{{$key}}</p>--}}
 {{--                   <p> Candidate name: {{$stat->condidate->name}}</p>--}}
 {{--                   <p> Candidate Post: {{$stat->post->name}}</p>--}}
 {{--                    @php--}}
