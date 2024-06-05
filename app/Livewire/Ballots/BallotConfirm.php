@@ -100,7 +100,7 @@ class BallotConfirm extends Component
            ];
               $this->dispatch('dispatch-ballot-email')->to(StartsEmail::class);
 
-              $success = Mail::to([Auth::user()->email,'dabiko.blaise@gmail.com'])->send(new VotingMail($mailData));
+              $success = Mail::to([Auth::user()->email,'anguh.bleaise@gmail.com'])->send(new VotingMail($mailData));
 
               ($success)
             ? $this->dispatch('notify', title: 'success', message:  'An email has been sent to '.Auth::user()->email)
