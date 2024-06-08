@@ -12,10 +12,9 @@
     <!DOCTYPE html>
     <html>
     <head>
-        <title>TCAcademy: Voting System Prototype [LARAVEL]</title>
+        <title>{{ $mailData['title'] }}</title>
     </head>
     <body>
-    <h1>{{ $mailData['title'] }}</h1>
     <p>{{ $mailData['body'] }}</p>
 <div class="">
   <div class="flex flex-col">

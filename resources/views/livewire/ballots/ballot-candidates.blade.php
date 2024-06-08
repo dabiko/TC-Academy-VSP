@@ -38,11 +38,11 @@
                                     <div class="mb-4">
                                         <button
                                             @click="$dispatch('dispatch-vote-now',
-                        { candidate_id: '{{ Crypt::encryptString($candidate->id) }}',
-                         name: '{{$candidate->name}}',
-                         post_id: '{{ Crypt::encryptString($post->id) }}',
-                         post: '{{$post->name}}',
-                         })"
+                                            { candidate_id: '{{ Crypt::encryptString($candidate->id) }}',
+                                             name: '{{$candidate->name}}',
+                                             post_id: '{{ Crypt::encryptString($post->id) }}',
+                                             post: '{{$post->name}}',
+                                             })"
                                             class="mt-4 px-3 py-1 bg-indigo-600 dark:bg-indigo-700 text-white rounded">
                                             <i class='fa-regular fa-circle-dot fa-beat-fade'></i>
                                             Vote Now

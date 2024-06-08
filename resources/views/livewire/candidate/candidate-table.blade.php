@@ -26,8 +26,8 @@
                         ])
 
                         @include('livewire.partials.sortable-th', [
-                          'columnName' => 'email',
-                          'displayName' => 'Email'
+                          'columnName' => 'name',
+                          'displayName' => 'Name'
 
                         ])
 
